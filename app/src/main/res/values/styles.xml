@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemeGreen" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryGreen</item>
+        <item name="colorButtonNormal">@color/colorPrimaryDarkGreen</item>
+        <item name="android:textColor">@color/colorTextGreen</item>
+        <item name="colorAccent">@color/colorAccentGreen</item>
+    </style>
+
+    <style name="AppThemeBlack" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryBlack</item>
+        <item name="colorButtonNormal">@color/colorPrimaryDarkBlack</item>
+        <item name="android:textColor">@color/colorTextBlack</item>
+        <item name="colorAccent">@color/colorAccentBlack</item>
+    </style>
+
+    <style name="AppThemeBlue" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryBlue</item>
+        <item name="colorButtonNormal">@color/colorPrimaryDarkBlue</item>
+        <item name="android:textColor">@color/colorTextBlue</item>
+        <item name="colorAccent">@color/colorAccentBlue</item>
+    </style>
+
+    <style name="AppTheme.Margin1">
+        <item name="android:layout_margin">1dp</item>
+    </style>
+
+    <style name="AppTheme.Margin3">
+        <item name="android:layout_margin">3dp</item>
+    </style>
+
+    <style name="AppTheme.Margin10">
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+</resources>

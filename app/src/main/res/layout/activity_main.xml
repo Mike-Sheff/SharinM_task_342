@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/langLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/langTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textTextLang"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/langSpinner"
+            app:layout_constraintStart_toStartOf="@id/langLinearLayout" />
+
+        <Spinner
+            android:id="@+id/langSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/lang"
+            android:scrollbarSize="20dp"
+            app:layout_constraintEnd_toEndOf="@id/langLinearLayout"
+            app:layout_constraintStart_toEndOf="@+id/langTextView" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/langButtonLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/langLinearLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/langButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textButton"
+            android:textSize="20dp"
+            app:layout_constraintTop_toTopOf="@+id/langLinearLayout" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/colorLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/langButtonLinearLayout"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/colorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/colorsTextView"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/colorSpinner"
+            app:layout_constraintStart_toStartOf="@id/colorLinearLayout" />
+
+        <Spinner
+            android:id="@+id/colorSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/colors"
+            android:scrollbarSize="20dp"
+            app:layout_constraintEnd_toEndOf="@id/colorLinearLayout"
+            app:layout_constraintStart_toEndOf="@+id/colorTextView" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/colorButtonLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/colorLinearLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/colorButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textButton"
+            android:textSize="20dp"
+            app:layout_constraintTop_toTopOf="@+id/colorLinearLayout" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/indentLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/colorButtonLinearLayout"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/indentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/indentTextView"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/indentSpinner"
+            app:layout_constraintStart_toStartOf="@id/indentLinearLayout" />
+
+        <Spinner
+            android:id="@+id/indentSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/indent"
+            android:scrollbarSize="20dp"
+            app:layout_constraintEnd_toEndOf="@id/indentLinearLayout"
+            app:layout_constraintStart_toEndOf="@+id/indentTextView" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/indentButtonLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/indentLinearLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/indentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textButton"
+            android:textSize="20dp"
+            app:layout_constraintTop_toTopOf="@+id/colorLinearLayout" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

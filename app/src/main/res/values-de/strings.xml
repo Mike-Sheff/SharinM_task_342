@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name = "app_name"> Sprachumschaltseite </string>
+    <string name = "textTextView"> Sprache ausgewählt - Deutsch</string>
+    <string name = "textTextLang"> Sprachen: </string>
+    <string name = "textButton"> Wählen Sie </string>
+    <string-array name = "lang">
+        <item> Russisch </item>
+        <item> Englisch </item>
+        <item> Französisch </item>
+        <item> Deutsch </item>
+    </string-array>
+    <string-array name="colors">
+        <item>schwarz</item>
+        <item>grün</item>
+        <item>blau</item>
+    </string-array>
+    <string name="colorsTextView">Farbe:</string>
+</resources>

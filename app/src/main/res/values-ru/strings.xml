@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Страница переключения языка</string>
+    <string name="textTextView">Выбран язык - Русский</string>
+    <string name="textTextLang">Языки:</string>
+    <string name="textButton">Выбрать</string>
+    <string-array name="lang">
+        <item>Русский</item>
+        <item>Английский</item>
+        <item>Французский</item>
+        <item>Немецкий</item>
+    </string-array>
+    <string-array name="colors">
+        <item>черный</item>
+        <item>зеленый</item>
+        <item>синий</item>
+    </string-array>
+    <string name="colorsTextView">Цвет:</string>
+</resources>

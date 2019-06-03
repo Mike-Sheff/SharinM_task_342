@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name = "app_name"> Page de changement de langue </string>
+    <string name = "textTextView"> Langue sélectionnée - Français</string>
+    <string name = "textTextLang"> Langues: </string>
+    <string name = "textButton"> Sélectionnez </string>
+    <string-array name = "lang">
+        <item> Russe </item>
+        <item> Anglais </item>
+        <item> Français </item>
+        <item> Allemand </item>
+    </string-array>
+    <string-array name="colors">
+        <item>noir</item>
+        <item>vert</item>
+        <item>bleu</item>
+    </string-array>
+    <string name="colorsTextView">Couleur:</string>
+</resources>

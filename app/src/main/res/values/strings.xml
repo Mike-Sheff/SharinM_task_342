@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Переключение отступов в приложении</string>
+    <string name="textTextView">Выбран язык - Русский</string>
+    <string name="textTextLang">Языки:</string>
+    <string name="textButton">Выбрать</string>
+    <string name="colorsTextView">Цвет:</string>
+    <string name="indentTextView" translatable="false">Отступ:</string>
+    <string-array name="lang">
+        <item>Русский</item>
+        <item>Английский</item>
+        <item>Французский</item>
+        <item>Немецкий</item>
+    </string-array>
+    <string-array name="colors">
+        <item>black</item>
+        <item>green</item>
+        <item>blue</item>
+    </string-array>
+    <string-array name="indent">
+        <item>крупный</item>
+        <item>средний</item>
+        <item>мелкий</item>
+</string-array>
+</resources>
