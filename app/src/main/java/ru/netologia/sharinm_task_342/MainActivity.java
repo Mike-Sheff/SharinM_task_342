@@ -2,6 +2,8 @@ package ru.netologia.sharinm_task_342;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +18,15 @@ public class MainActivity extends AppCompatActivity {
     public static Spinner spinnerLang;
     public static Spinner spinnerColor;
     public static Spinner spinnerIndent;
+
+    private static final String APP_PREFERENCES = "mysettings";
+    private static final String APP_PREFERENCES_LANG = "Lang";
+    private static final String APP_PREFERENCES_COLOR = "Color";
+    private static final String APP_PREFERENCES_INDENT = "Indent";
+
+    public SharedPreferences.Editor editor;
+
+    SharedPreferences mSettings;
 
     @Override
     public void onSaveInstanceState(Bundle saveInstanceState){
@@ -50,6 +61,18 @@ public class MainActivity extends AppCompatActivity {
         Button btnColor = findViewById(R.id.colorButton);
         Button btnIndent = findViewById(R.id.indentButton);
 
+        mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+        editor = mSettings.edit();
+        if(mSettings.contains(APP_PREFERENCES_COLOR)) {
+            spinnerColor.setSelection(mSettings.getInt(APP_PREFERENCES_COLOR, 0));
+        }
+        if(mSettings.contains(APP_PREFERENCES_LANG)) {
+            spinnerLang.setSelection(mSettings.getInt(APP_PREFERENCES_LANG, 0));
+        }
+        if(mSettings.contains(APP_PREFERENCES_INDENT)) {
+            spinnerIndent.setSelection(mSettings.getInt(APP_PREFERENCES_INDENT, 0));
+        }
+
         btnIndent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,6 +89,11 @@ public class MainActivity extends AppCompatActivity {
                         Utils.changeToIndent(MainActivity.this, Utils.INDENT_MARGIN10);
                         break;
                 }
+
+                editor.putInt(APP_PREFERENCES_LANG, (int) spinnerLang.getSelectedItemId());
+                editor.putInt(APP_PREFERENCES_COLOR, (int) spinnerColor.getSelectedItemId());
+                editor.putInt(APP_PREFERENCES_INDENT, (int) spinnerIndent.getSelectedItemId());
+                editor.apply();
             }
         });
         btnLang.setOnClickListener(new View.OnClickListener() {
@@ -96,6 +124,12 @@ public class MainActivity extends AppCompatActivity {
                 config.setLocale(locale);
                 getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
                 recreate();
+
+                editor.putInt(APP_PREFERENCES_LANG, (int) spinnerLang.getSelectedItemId());
+                editor.putInt(APP_PREFERENCES_COLOR, (int) spinnerColor.getSelectedItemId());
+                editor.putInt(APP_PREFERENCES_INDENT, (int) spinnerIndent.getSelectedItemId());
+                editor.apply();
+
                 Toast.makeText(MainActivity.this, getString(R.string.textTextView), Toast.LENGTH_LONG).show();
             }
         });
@@ -105,6 +139,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 int selected = (int) spinnerColor.getSelectedItemId();
+
+                editor.putInt(APP_PREFERENCES_LANG, (int) spinnerLang.getSelectedItemId());
+                editor.putInt(APP_PREFERENCES_COLOR, (int) spinnerColor.getSelectedItemId());
+                editor.putInt(APP_PREFERENCES_INDENT, (int) spinnerIndent.getSelectedItemId());
+                editor.apply();
 
                 switch (selected) {
 

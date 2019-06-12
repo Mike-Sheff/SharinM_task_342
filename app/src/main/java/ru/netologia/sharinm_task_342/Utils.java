@@ -8,15 +8,15 @@ public class Utils
     private static int sTheme;
     private static int sIndent;
 
-    public final static int THEME_DEFAULT = 3;
     public final static int THEME_BLACK = 0;
     public final static int THEME_GREEN = 1;
     public final static int THEME_BLUE = 2;
-
+    public final static int THEME_DEFAULT = 3;
 
     public final static int INDENT_MARGIN1 = 0;
     public final static int INDENT_MARGIN3 = 1;
     public final static int INDENT_MARGIN10 = 2;
+
     /**
      * Set the theme of the Activity, and restart it by creating a new Activity of the same type.
      */
